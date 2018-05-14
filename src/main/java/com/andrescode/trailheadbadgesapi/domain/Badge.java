@@ -39,7 +39,7 @@ public class Badge {
         return hours;
     }
 
-    public void setHours(float hours) {
+    public void setHours(Object hours) {
         this.hours = hours;
     }
 }
