@@ -2,8 +2,4 @@
 *.iml
 target/
 out/
-<<<<<<< HEAD
 src/main/resources/
-=======
-src/main/resources
->>>>>>> develop
