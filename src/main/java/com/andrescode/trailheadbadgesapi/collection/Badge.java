@@ -1,4 +1,4 @@
-package com.andrescode.trailheadbadgesapi.domain;
+package com.andrescode.trailheadbadgesapi.collection;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

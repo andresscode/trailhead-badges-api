@@ -1,7 +1,7 @@
 package com.andresscode.trailheadbadgesapi.repository;
 
 import com.andrescode.trailheadbadgesapi.Main;
-import com.andrescode.trailheadbadgesapi.domain.Badge;
+import com.andrescode.trailheadbadgesapi.collection.Badge;
 import com.andrescode.trailheadbadgesapi.repository.BadgeRespository;
 import org.junit.After;
 import org.junit.Assert;
@@ -23,7 +23,7 @@ public class BadgeRepositoryTest {
     @Test
     public void findByHrefTest() {
         Badge found = badgeRespository.findByHref(module.getHref());
-        Assert.assertEquals(module.getHref(), found.getHref());
+        Assert.assertEquals(module.getName(), found.getName());
     }
 
     @Before
