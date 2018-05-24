@@ -12,4 +12,5 @@ import java.util.List;
 @RepositoryRestResource(collectionResourceRel = "users", path = "users")
 public interface UserRepository extends MongoRepository<User, String> {
     List<User> findByCompany(@Param("company") String company);
+    User findByTrailheadId(@Param("trailheadId") String trailheadId);
 }
