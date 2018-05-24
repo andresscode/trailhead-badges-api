@@ -128,10 +128,71 @@ please go to this [link.](https://trailheadbadges-api.herokuapp.com)
       ]
     }
     
+### Find by Trailhead Id
+
+* **URL:** https://trailheadbadges-api.herokuapp.com/users/search/findByTrailheadId{?trailheadId}
+* **Method:** GET
+
+###### Request Sample
+
+`CURL https://trailheadbadges-api.herokuapp.com/users/search/findByTrailheadId?trailheadId=ABCDE0123456789`
+
+###### Response Sample
+
+    {
+      "trailheadId" : "ABCDE0123456789",
+      "firstName" : "Joe",
+      "lastName" : "Doe",
+      "company" : "Github",
+      "badges" : [
+          {
+              "href" : "https://trailhead.salesforce.com/projects/workshop-lightning-programmatic",
+              "earned" : "2018-01-01",
+              "points" : 400
+          },
+          {
+              "href" : "https://trailhead.salesforce.com/projects/build-reusable-lightning-components",
+              "earned" : "2018-01-01",
+              "points" : 600
+          }
+      ]
+    }
+    
 ### Save an user
 
 * **URL:** https://trailheadbadges-api.herokuapp.com/users
 * **Method:** POST
+* **Body Parameters:** (String) trailheadId, (String) firstName, (String) lastName,
+(String) company, (List<Badge>) badges
+
+*Note 1: Badge objects are made of (String) href, (String) earned, (Integer) points.*  
+*Note 2: The earned field is a String of a Date with format YYYY-MM-DD.*
+
+###### Request Sample
+
+    {
+      "trailheadId" : "ABCDE0123456789",
+      "firstName" : "Joe",
+      "lastName" : "Doe",
+      "company" : "Github",
+      "badges" : [
+          {
+              "href" : "https://trailhead.salesforce.com/projects/workshop-lightning-programmatic",
+              "earned" : "2018-01-01",
+              "points" : 400
+          },
+          {
+              "href" : "https://trailhead.salesforce.com/projects/build-reusable-lightning-components",
+              "earned" : "2018-01-01",
+              "points" : 600
+          }
+      ]
+    }
+    
+### Update an user
+
+* **URL:** https://trailheadbadges-api.herokuapp.com/users/{id}
+* **Method:** PUT
 * **Body Parameters:** (String) trailheadId, (String) firstName, (String) lastName,
 (String) company, (List<Badge>) badges
 
