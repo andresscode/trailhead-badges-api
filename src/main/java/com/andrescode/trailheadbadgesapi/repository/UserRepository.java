@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
-@CrossOrigin(origins = "chrome-extension://jnmofgjmbnkhgnfhjbdngcjnooabfdpc")
+@CrossOrigin(origins = "chrome-extension://njkppckpngjhdlmiindllijgjjeflpon")
 @RepositoryRestResource(collectionResourceRel = "users", path = "users")
 public interface UserRepository extends MongoRepository<User, String> {
     List<User> findByCompany(@Param("company") String company);
