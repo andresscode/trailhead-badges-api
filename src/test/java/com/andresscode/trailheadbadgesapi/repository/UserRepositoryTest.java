@@ -27,7 +27,7 @@ public class UserRepositoryTest {
     @Test
     public void findByCompanyTest() {
         int expected = 1;
-        List<User> result = userRepository.findByCompany(user.getCompany());
+        List<User> result = userRepository.findByCompanyContainingIgnoreCase(user.getCompany());
         Assert.assertEquals(expected, result.size());
     }
 

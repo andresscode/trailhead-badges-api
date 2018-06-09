@@ -11,6 +11,6 @@ import java.util.List;
 @CrossOrigin(origins = {"chrome-extension://njkppckpngjhdlmiindllijgjjeflpon", "chrome-extension://gmpnnbgfdeepifibcklmmedbejbacdic"})
 @RepositoryRestResource(collectionResourceRel = "users", path = "users")
 public interface UserRepository extends MongoRepository<User, String> {
-    List<User> findByCompany(@Param("company") String company);
+    List<User> findByCompanyContainingIgnoreCase(@Param("company") String company);
     User findByTrailheadId(@Param("trailheadId") String trailheadId);
 }
