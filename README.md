@@ -100,7 +100,7 @@ please go to this [link.](https://trailheadbadges-api.herokuapp.com)
     
 ### Find by company
 
-* **URL:** https://trailheadbadges-api.herokuapp.com/users/search/findByCompany{?company}
+* **URL:** https://trailheadbadges-api.herokuapp.com/users/search/findByCompanyContainingIgnoreCase{?company}
 * **Method:** GET
 
 ###### Request Sample
