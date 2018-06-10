@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
-@CrossOrigin(origins = {"chrome-extension://njkppckpngjhdlmiindllijgjjeflpon", "chrome-extension://gmpnnbgfdeepifibcklmmedbejbacdic"})
+@CrossOrigin(origins = {"chrome-extension://njkppckpngjhdlmiindllijgjjeflpon", "chrome-extension://gmpnnbgfdeepifibcklmmedbejbacdic", "https://trailheadbadges-web.herokuapp.com"})
 @RepositoryRestResource(collectionResourceRel = "users", path = "users")
 public interface UserRepository extends MongoRepository<User, String> {
     List<User> findByCompanyContainingIgnoreCase(@Param("company") String company);
